@@ -1,0 +1,11 @@
+{
+  "name": "election-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Production-ready Election Assistant web application",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test --test-isolation=none"
+  }
+}

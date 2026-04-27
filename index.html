@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Election Assistant explains voter registration, polling, timelines, and readiness with a guided election experience."
+    />
+    <meta name="ga-measurement-id" content="" />
+    <title>Election Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <div class="page-aura" aria-hidden="true"></div>
+    <header class="site-header" id="top">
+      <div class="nav-shell">
+        <a class="brandmark" href="#top" aria-label="Election Assistant home">
+          <span class="brandmark-badge" aria-hidden="true">EA</span>
+          <span class="brandmark-text" data-copy="brand">Election Assistant</span>
+        </a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a class="nav-link" href="#guide-section" data-section-link="guide">
+            <span data-copy="navGuide">Guide</span>
+          </a>
+          <a class="nav-link" href="#assistant-section" data-section-link="assistant">
+            <span data-copy="navAssistant">Assistant</span>
+          </a>
+          <a class="nav-link" href="#timeline-section" data-section-link="timeline">
+            <span data-copy="navTimeline">Timeline</span>
+          </a>
+          <a class="nav-link" href="#readiness-section" data-section-link="readiness">
+            <span data-copy="navReadiness">Readiness</span>
+          </a>
+        </nav>
+        <div class="header-controls">
+          <div class="language-switch" role="group" aria-label="Language selection">
+            <button class="control-chip is-active" id="lang-en" type="button" aria-pressed="true">
+              English
+            </button>
+            <button class="control-chip" id="lang-hi" type="button" aria-pressed="false">
+              हिन्दी
+            </button>
+          </div>
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-pressed="false">
+            Dark mode
+          </button>
+        </div>
+      </div>
+
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="hero-eyebrow" data-copy="heroEyebrow">Election clarity for every voter</p>
+          <h1 id="hero-title" data-copy="heroTitle">
+            Understand every election step without the legal haze.
+          </h1>
+          <p class="hero-description" data-copy="heroDescription">
+            A guided, mobile-friendly assistant that explains registration, polling,
+            EVM and VVPAT, timelines, and what you need before polling day.
+          </p>
+          <div class="hero-actions" aria-label="Hero actions">
+            <a class="primary-button" href="#assistant-section" data-copy="heroPrimary">
+              Open assistant
+            </a>
+            <a class="secondary-button" href="#readiness-section" data-copy="heroSecondary">
+              Check readiness
+            </a>
+          </div>
+          <dl class="hero-stats" aria-label="Highlights">
+            <div class="hero-stat">
+              <dt data-copy="statOneLabel">Guided stages</dt>
+              <dd data-copy="statOneValue">5 election milestones</dd>
+            </div>
+            <div class="hero-stat">
+              <dt data-copy="statTwoLabel">Assistant mode</dt>
+              <dd data-copy="statTwoValue">Chat-first, concise answers</dd>
+            </div>
+            <div class="hero-stat">
+              <dt data-copy="statThreeLabel">Readiness check</dt>
+              <dd data-copy="statThreeValue">Interactive polling checklist</dd>
+            </div>
+          </dl>
+        </div>
+
+        <figure class="hero-visual">
+          <img
+            src="./assets/election-hero.svg"
+            alt="Illustration of an election dashboard with a voter card, secure ballot device, and election timeline."
+          />
+          <figcaption class="visual-caption" data-copy="visualCaption">
+            Built to explain the process from voter roll to result declaration.
+          </figcaption>
+          <div class="visual-floating-card">
+            <span class="floating-card-label" data-copy="floatingLabel">Official-source first</span>
+            <strong data-copy="floatingTitle">Procedural help without the noise</strong>
+            <p data-copy="floatingBody">
+              Learn the flow here, then confirm constituency-specific details from the
+              latest official election sources.
+            </p>
+          </div>
+        </figure>
+      </section>
+    </header>
+
+    <main id="main-content" class="page-main" tabindex="-1">
+      <section class="overview-grid" aria-label="Core capabilities">
+        <article class="overview-card">
+          <p class="overview-label" data-copy="overviewOneLabel">Interactive guide</p>
+          <h2 data-copy="overviewOneTitle">Step-by-step election journey</h2>
+          <p data-copy="overviewOneBody">
+            Follow the process from registration and campaigning to counting and result
+            declaration.
+          </p>
+        </article>
+        <article class="overview-card">
+          <p class="overview-label" data-copy="overviewTwoLabel">Assistant experience</p>
+          <h2 data-copy="overviewTwoTitle">Quick answers in a real chat layout</h2>
+          <p data-copy="overviewTwoBody">
+            Ask questions, use quick prompts, and review clear responses with action-ready
+            follow-ups.
+          </p>
+        </article>
+        <article class="overview-card">
+          <p class="overview-label" data-copy="overviewThreeLabel">Google-ready</p>
+          <h2 data-copy="overviewThreeTitle">Analytics live, Firebase prepared</h2>
+          <p id="integration-summary">
+            Google Analytics can be enabled with a measurement ID, and Firebase config is
+            ready for project keys.
+          </p>
+          <div class="integration-status">
+            <span class="status-pill" id="analytics-status">Analytics placeholder</span>
+            <span class="status-pill" id="firebase-status">Firebase placeholder</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section" id="guide-section" aria-labelledby="guide-heading">
+        <div class="section-shell" data-section-root="guide" aria-busy="true">
+          <div class="loading-card">
+            <h2 id="guide-heading">Loading guide</h2>
+            <p>Preparing the election walkthrough.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="assistant-section" aria-labelledby="assistant-heading">
+        <div class="section-shell" data-section-root="assistant" aria-busy="true">
+          <div class="loading-card">
+            <h2 id="assistant-heading">Loading assistant</h2>
+            <p>Preparing the chat experience.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="timeline-section" aria-labelledby="timeline-heading">
+        <div class="section-shell" data-section-root="timeline" aria-busy="true">
+          <div class="loading-card">
+            <h2 id="timeline-heading">Loading timeline</h2>
+            <p>Preparing the election phase view.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="readiness-section" aria-labelledby="readiness-heading">
+        <div class="section-shell" data-section-root="readiness" aria-busy="true">
+          <div class="loading-card">
+            <h2 id="readiness-heading">Loading readiness checker</h2>
+            <p>Preparing the polling-day checklist.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="myths-section" aria-labelledby="myths-heading">
+        <div class="section-shell" data-section-root="myths" aria-busy="true">
+          <div class="loading-card">
+            <h2 id="myths-heading">Loading myth checks</h2>
+            <p>Preparing the fake news awareness section.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p data-copy="footerLead">
+        Election Assistant is built for public understanding and should be paired with
+        current official election guidance for legal deadlines and constituency details.
+      </p>
+      <p data-copy="footerTail">
+        Open the direct file for offline review or run the local server for full API-backed
+        behavior and security headers.
+      </p>
+    </footer>
+
+    <noscript>
+      <div class="noscript-banner">
+        JavaScript is required for the interactive guide, assistant, timeline, and readiness
+        checker.
+      </div>
+    </noscript>
+    <script type="module" src="./scripts/app.js"></script>
+  </body>
+</html>

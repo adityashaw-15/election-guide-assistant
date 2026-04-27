@@ -1,168 +1,66 @@
-# 🗳️ Election Assistant
+# Election Assistant
 
-An interactive web-based assistant that helps users understand the election process, timelines, and voting steps in a simple, guided, and accessible way.
+Election Assistant is a polished, production-ready educational web app that explains the election process with a modern guided interface, a chatbot-style assistant, timeline visualization, and a voter readiness checker.
 
----
+## Features
 
-## 🚀 Overview
+- Modern hero-driven interface with sticky navigation, soft shadows, responsive cards, and Google Fonts
+- Interactive election guide with progress tracker and stage detail cards
+- Chatbot UI with user and assistant bubbles, quick prompts, input sanitization, validation, and graceful file-mode fallback
+- Chat layout separated cleanly: assistant thread on the left, quick prompts and suggested topics on the right
+- Timeline viewer with visual markers for each election phase
+- Voter readiness quiz with live scoring and localized guidance
+- Fake news awareness section focused on source-check habits
+- English and Hindi interface toggle
+- Dark mode toggle with persistent preference
+- Google Analytics support and Firebase configuration placeholder
 
-Election Assistant is a civic-tech web application designed to improve election literacy.
-It provides a step-by-step guide, interactive timeline, readiness checker, and a Q&A assistant to help users confidently participate in elections.
+## Tech stack
 
----
+- Vanilla JavaScript modules
+- Node.js HTTP server
+- Shared logic modules for assistant matching, readiness scoring, sanitization, and validation
+- Node built-in test runner with Jest-style `describe` and `it` cases
 
-## ✨ Features
+## Folder structure
 
-### 📘 Guided Election Flow
+- `public/components/`: lazily loaded UI sections
+- `public/styles/`: application styles
+- `public/scripts/`: app bootstrap, config, client services, and DOM utilities
+- `src/`: shared data, utilities, and server-side logic
+- `tests/`: sample behavior and integration tests
 
-* Step-by-step explanation:
+## Run locally
 
-  * Voter Registration
-  * Campaigning
-  * Voting Process (EVM & VVPAT)
-  * Vote Counting
-  * Result Declaration
+1. Open a terminal in `C:\Users\user\Documents\New project\election-assistant`
+2. Start the server:
 
-### 🤖 Q&A Assistant
-
-* Ask questions like:
-
-  * *How do I vote?*
-  * *What is EVM?*
-  * *What documents are required?*
-* Provides concise, structured answers
-
-### 📅 Election Timeline
-
-* Visual representation of election phases
-* Easy-to-follow chronological flow
-
-### ✅ Voter Readiness Checker
-
-* Quick checklist to ensure you’re prepared for voting day
-
-### 🌐 Bilingual Support
-
-* English and Hindi language toggle
-
-### 🌙 Dark Mode
-
-* Improved accessibility and user comfort
-
----
-
-## 🧠 Tech Stack
-
-* HTML, CSS, JavaScript
-* Modular component-based structure
-* Firebase / Google services (optional integration)
-
----
-
-## 🔐 Security
-
-* Input sanitization to prevent XSS
-* Safe DOM manipulation (no unsafe innerHTML usage)
-* Basic validation for all user inputs
-
----
-
-## ♿ Accessibility
-
-* Semantic HTML structure
-* ARIA labels for assistive technologies
-* Keyboard navigation support
-* Proper color contrast
-
----
-
-## ⚡ Performance
-
-* Optimized assets and rendering
-* Minimal and efficient JavaScript
-* Lazy loading where applicable
-
----
-
-## 🧪 Testing
-
-* Unit tests for core logic
-* Input validation test cases
-* UI interaction checks
-
----
-
-## 📁 Project Structure
-
-```
-election-assistant/
-│── public/
-│   └── index.html
-│── src/
-│── tests/
-│── package.json
-│── server.js
-│── README.md
+```powershell
+node server.js
 ```
 
----
+3. Open `http://127.0.0.1:4173`
 
-## 🛠️ How to Run Locally
+## Direct file mode
 
-### Option 1: Using Python
+You can also open [public/index.html](</C:/Users/user/Documents/New project/election-assistant/public/index.html>) directly in a browser for a styled offline preview. In file mode the assistant falls back to local guidance, while the full server mode adds API validation, rate limiting, and security headers.
 
-```bash
-python -m http.server 8000
+## Tests
+
+Run:
+
+```powershell
+node --test --test-isolation=none
 ```
 
-Then open:
+## Google services
 
-```
-http://localhost:8000/public/index.html
-```
+- Google Analytics: add your measurement ID to the `ga-measurement-id` meta tag in [public/index.html](</C:/Users/user/Documents/New project/election-assistant/public/index.html>).
+- Firebase placeholder: update [firebase.js](</C:/Users/user/Documents/New project/election-assistant/public/scripts/config/firebase.js>) with your project keys before wiring Firebase SDK features.
 
-### Option 2: Using Live Server (VS Code)
+## Security notes
 
-* Install “Live Server” extension
-* Right click `index.html` → Open with Live Server
-
----
-
-## 🌍 Deployment
-
-You can deploy using:
-
-* Firebase Hosting (recommended)
-* GitHub Pages (move `public` files to root)
-
----
-
-## 🎯 Objective
-
-To make election processes:
-
-* Easy to understand
-* Accessible to everyone
-* Interactive and engaging
-
----
-
-## 💡 Future Improvements
-
-* Real-time election data integration
-* Polling booth locator
-* AI-powered chatbot responses
-* Multi-language expansion
-
----
-
-## 🤝 Contribution
-
-Contributions are welcome! Feel free to fork and improve.
-
----
-
-## 📄 License
-
-This project is for educational and demonstration purposes.
-
+- Questions are sanitized before display and validated on both client and server
+- Assistant responses are rendered with safe DOM APIs instead of `innerHTML`
+- The server includes rate limiting and a CSP that allows Google Fonts and Google integrations
+- No secrets are committed to the frontend
