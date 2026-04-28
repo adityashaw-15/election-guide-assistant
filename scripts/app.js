@@ -11,8 +11,8 @@ const state = {
   copy: getCopy(localStorage.getItem("election-assistant-language") || "en"),
   isFileMode: window.location.protocol === "file:",
   endpoints: {
-    bootstrap: new URL("./api/bootstrap", window.location.href).toString(),
-    ask: new URL("./api/ask", window.location.href).toString()
+  bootstrap: null,
+  ask: null
   },
   ui: {
     guideIndex: 0,
