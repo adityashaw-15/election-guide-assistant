@@ -1,5 +1,5 @@
-import { guideSteps, timelineStages, fakeNewsTips } from "../../src/data/electionData.js";
-import { getFaqPreview } from "../../src/services/faqService.js";
+import { guideSteps, timelineStages, fakeNewsTips } from "../data/electionData.js";
+import { getFaqPreview } from "../services/faqService.js";
 import { getCopy } from "./config/translations.js";
 import { isFirebaseConfigured } from "./config/firebase.js";
 import { createRenderTracker } from "./utils/renderTracker.js";
